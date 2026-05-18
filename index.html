@@ -1,0 +1,708 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Vogt Capital Investments</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Cormorant+Garamond:wght@500;600;700&display=swap" rel="stylesheet">
+
+<style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+}
+
+html{
+scroll-behavior:smooth;
+}
+
+body{
+font-family:'Inter',sans-serif;
+background:#05070b;
+color:#fff;
+overflow-x:hidden;
+}
+
+a{
+text-decoration:none;
+color:inherit;
+}
+
+img{
+max-width:100%;
+display:block;
+}
+
+.container{
+width:90%;
+max-width:1280px;
+margin:auto;
+}
+
+/* NAVBAR */
+
+header{
+position:fixed;
+width:100%;
+top:0;
+left:0;
+z-index:1000;
+background:rgba(5,7,11,0.7);
+backdrop-filter:blur(10px);
+border-bottom:1px solid rgba(255,255,255,0.05);
+}
+
+.navbar{
+height:90px;
+display:flex;
+align-items:center;
+justify-content:space-between;
+}
+
+.logo{
+font-size:18px;
+letter-spacing:4px;
+line-height:1.4;
+font-weight:600;
+}
+
+.logo span{
+display:block;
+font-size:12px;
+letter-spacing:3px;
+opacity:0.8;
+margin-top:6px;
+}
+
+.nav-links{
+display:flex;
+gap:45px;
+align-items:center;
+}
+
+.nav-links a{
+font-size:14px;
+font-weight:500;
+color:#f2f2f2;
+transition:0.3s;
+}
+
+.nav-links a:hover{
+color:#caa15c;
+}
+
+.contact-btn{
+border:1px solid #caa15c;
+padding:14px 24px;
+color:#caa15c;
+transition:0.3s;
+}
+
+.contact-btn:hover{
+background:#caa15c;
+color:#05070b;
+}
+
+/* HERO */
+
+.hero{
+min-height:100vh;
+position:relative;
+display:flex;
+align-items:center;
+background:
+linear-gradient(to right, rgba(5,7,11,0.95) 35%, rgba(5,7,11,0.45)),
+url('https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?q=80&w=1974&auto=format&fit=crop') center/cover no-repeat;
+}
+
+.hero-content{
+max-width:700px;
+padding-top:120px;
+}
+
+.small-title{
+color:#caa15c;
+letter-spacing:3px;
+font-size:15px;
+margin-bottom:25px;
+}
+
+.hero h1{
+font-family:'Cormorant Garamond',serif;
+font-size:86px;
+line-height:0.95;
+margin-bottom:35px;
+font-weight:600;
+}
+
+.hero p{
+font-size:22px;
+line-height:1.7;
+color:#d6d6d6;
+max-width:620px;
+margin-bottom:45px;
+}
+
+.hero-btn{
+display:inline-block;
+background:#caa15c;
+color:#05070b;
+padding:18px 34px;
+font-weight:600;
+letter-spacing:1px;
+transition:0.3s;
+}
+
+.hero-btn:hover{
+transform:translateY(-3px);
+}
+
+/* SECTION */
+
+section{
+padding:120px 0;
+}
+
+.section-grid{
+display:grid;
+grid-template-columns:1fr 1fr;
+gap:80px;
+align-items:center;
+}
+
+.section-title{
+font-family:'Cormorant Garamond',serif;
+font-size:60px;
+line-height:1;
+margin-bottom:35px;
+}
+
+.section-text{
+color:#c9c9c9;
+font-size:18px;
+line-height:1.9;
+margin-bottom:40px;
+}
+
+.features{
+display:flex;
+flex-direction:column;
+gap:22px;
+}
+
+.feature{
+display:flex;
+gap:18px;
+align-items:flex-start;
+color:#e5e5e5;
+}
+
+.feature-icon{
+color:#caa15c;
+font-size:22px;
+}
+
+.about-image{
+position:relative;
+}
+
+.about-image img{
+border-radius:2px;
+}
+
+.experience-box{
+position:absolute;
+right:-40px;
+bottom:-40px;
+background:#0d1117;
+border:1px solid rgba(202,161,92,0.4);
+padding:35px;
+width:240px;
+}
+
+.experience-box h3{
+font-size:58px;
+color:#caa15c;
+margin-bottom:10px;
+font-family:'Cormorant Garamond',serif;
+}
+
+.experience-box p{
+color:#d5d5d5;
+line-height:1.6;
+}
+
+/* SERVICES */
+
+.services-header{
+text-align:center;
+margin-bottom:70px;
+}
+
+.services-grid{
+display:grid;
+grid-template-columns:repeat(3,1fr);
+gap:30px;
+}
+
+.service-card{
+background:#0d1117;
+border:1px solid rgba(255,255,255,0.06);
+padding:50px 35px;
+transition:0.3s;
+}
+
+.service-card:hover{
+transform:translateY(-8px);
+border-color:#caa15c;
+}
+
+.service-icon{
+font-size:38px;
+color:#caa15c;
+margin-bottom:25px;
+}
+
+.service-card h3{
+font-family:'Cormorant Garamond',serif;
+font-size:34px;
+margin-bottom:20px;
+}
+
+.service-card p{
+color:#c8c8c8;
+line-height:1.9;
+}
+
+/* CONTACT */
+
+.contact-section{
+background:#0b0f14;
+}
+
+.contact-wrapper{
+display:grid;
+grid-template-columns:1fr 1fr;
+gap:0;
+overflow:hidden;
+}
+
+.contact-image{
+min-height:450px;
+background:url('https://images.unsplash.com/photo-1520607162513-77705c0f0d4a?q=80&w=1974&auto=format&fit=crop') center/cover;
+}
+
+.contact-box{
+padding:80px;
+background:#0d1117;
+}
+
+.contact-box h2{
+font-family:'Cormorant Garamond',serif;
+font-size:58px;
+margin-bottom:30px;
+}
+
+.contact-box p{
+color:#d0d0d0;
+line-height:1.8;
+margin-bottom:40px;
+font-size:18px;
+}
+
+.contact-details{
+display:flex;
+flex-direction:column;
+gap:18px;
+color:#e2e2e2;
+}
+
+/* FOOTER */
+
+footer{
+background:#05070b;
+padding:80px 0;
+border-top:1px solid rgba(255,255,255,0.05);
+}
+
+.footer-grid{
+display:grid;
+grid-template-columns:1fr 1fr 1fr;
+gap:50px;
+}
+
+footer h4{
+color:#caa15c;
+margin-bottom:25px;
+letter-spacing:2px;
+font-size:14px;
+}
+
+footer p{
+color:#c8c8c8;
+line-height:1.9;
+font-size:15px;
+}
+
+.copyright{
+margin-top:70px;
+text-align:center;
+color:#8f8f8f;
+font-size:14px;
+}
+
+/* RESPONSIVE */
+
+@media(max-width:1000px){
+
+.hero h1{
+font-size:64px;
+}
+
+.section-grid,
+.services-grid,
+.contact-wrapper,
+.footer-grid{
+grid-template-columns:1fr;
+}
+
+.experience-box{
+position:relative;
+right:auto;
+bottom:auto;
+margin-top:20px;
+}
+
+.contact-box{
+padding:50px 35px;
+}
+
+}
+
+@media(max-width:700px){
+
+.navbar{
+flex-direction:column;
+justify-content:center;
+gap:15px;
+height:auto;
+padding:20px 0;
+}
+
+.nav-links{
+flex-wrap:wrap;
+justify-content:center;
+gap:20px;
+}
+
+.hero{
+padding:80px 0;
+}
+
+.hero h1{
+font-size:48px;
+}
+
+.hero p{
+font-size:18px;
+}
+
+.section-title{
+font-size:42px;
+}
+
+}
+
+</style>
+</head>
+
+<body>
+
+<header>
+<div class="container navbar">
+
+<div class="logo">
+VOGT
+<span>CAPITAL INVESTMENTS</span>
+</div>
+
+<nav class="nav-links">
+<a href="#about">ÜBER UNS</a>
+<a href="#services">LEISTUNGEN</a>
+<a href="#contact">KONTAKT</a>
+<a href="#impressum">IMPRESSUM</a>
+</nav>
+
+</div>
+</header>
+
+<!-- HERO -->
+
+<section class="hero">
+
+<div class="container">
+
+<div class="hero-content">
+
+<div class="small-title">
+VOGT CAPITAL INVESTMENTS
+</div>
+
+<h1>
+Strategic Capital.<br>
+Sustainable Growth.
+</h1>
+
+<p>
+Vogt Capital Investments steht für nachhaltige
+Wertschöpfung, strategische Partnerschaften
+und langfristige Investments mit Weitblick.
+</p>
+
+<a href="#contact" class="hero-btn">
+MEHR ERFAHREN
+</a>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- ABOUT -->
+
+<section id="about">
+
+<div class="container section-grid">
+
+<div>
+
+<div class="small-title">
+ÜBER UNS
+</div>
+
+<h2 class="section-title">
+Kapital. Strategie.<br>
+Vertrauen.
+</h2>
+
+<p class="section-text">
+Wir sind ein unabhängiges Investmentunternehmen
+mit Fokus auf langfristige Wertsteigerung,
+strategische Partnerschaften und nachhaltige
+Unternehmensentwicklung.
+</p>
+
+<div class="features">
+
+<div class="feature">
+<div class="feature-icon">◎</div>
+<div>Langfristige Perspektive</div>
+</div>
+
+<div class="feature">
+<div class="feature-icon">◎</div>
+<div>Vertrauensvolle Partnerschaften</div>
+</div>
+
+<div class="feature">
+<div class="feature-icon">◎</div>
+<div>Nachhaltige Wertschöpfung</div>
+</div>
+
+</div>
+
+</div>
+
+<div class="about-image">
+
+<img src="https://images.unsplash.com/photo-1497366754035-f200968a6e72?q=80&w=1974&auto=format&fit=crop" alt="Building">
+
+<div class="experience-box">
+<h3>10+</h3>
+<p>
+Jahre Erfahrung in
+Private Investments &
+Kapitalstrategien
+</p>
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- SERVICES -->
+
+<section id="services">
+
+<div class="container">
+
+<div class="services-header">
+
+<div class="small-title">
+UNSERE LEISTUNGEN
+</div>
+
+<h2 class="section-title">
+Unsere Investmentlösungen
+</h2>
+
+</div>
+
+<div class="services-grid">
+
+<div class="service-card">
+
+<div class="service-icon">▣</div>
+
+<h3>Private Investments</h3>
+
+<p>
+Direkte und indirekte Beteiligungen
+an Unternehmen mit starkem
+Wachstumspotenzial.
+</p>
+
+</div>
+
+<div class="service-card">
+
+<div class="service-icon">◔</div>
+
+<h3>Capital Advisory</h3>
+
+<p>
+Strategische Beratung zu Kapitalstruktur,
+Finanzierung und Optimierung der
+Unternehmensentwicklung.
+</p>
+
+</div>
+
+<div class="service-card">
+
+<div class="service-icon">↗</div>
+
+<h3>Growth Strategy</h3>
+
+<p>
+Unterstützung bei Wachstum,
+Skalierung und Wertsteigerung
+in allen Unternehmensphasen.
+</p>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- CONTACT -->
+
+<section class="contact-section" id="contact">
+
+<div class="container">
+
+<div class="contact-wrapper">
+
+<div class="contact-image"></div>
+
+<div class="contact-box">
+
+<div class="small-title">
+KONTAKT
+</div>
+
+<h2>
+Lassen Sie uns sprechen.
+</h2>
+
+<p>
+Wir sind stets auf der Suche nach
+neuen Partnerschaften und spannenden
+Investmentmöglichkeiten.
+</p>
+
+<div class="contact-details">
+
+<div>contact@vogt-capital.com</div>
+<div>+49 123 456789</div>
+<div>Berlin, Deutschland</div>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- FOOTER -->
+
+<footer id="impressum">
+
+<div class="container">
+
+<div class="footer-grid">
+
+<div>
+
+<h4>IMPRESSUM</h4>
+
+<p>
+Vogt Capital Investments<br>
+Max Mustermann<br>
+Musterstraße 1<br>
+10115 Berlin<br>
+Deutschland
+</p>
+
+</div>
+
+<div>
+
+<h4>RECHTLICHES</h4>
+
+<p>
+Impressum<br>
+Datenschutzerklärung<br>
+Haftungsausschluss
+</p>
+
+</div>
+
+<div>
+
+<h4>KONTAKT</h4>
+
+<p>
+contact@vogt-capital.com<br>
++49 123 456789<br>
+Berlin, Deutschland
+</p>
+
+</div>
+
+</div>
+
+<div class="copyright">
+© 2026 Vogt Capital Investments.
+Alle Rechte vorbehalten.
+</div>
+
+</div>
+
+</footer>
+
+</body>
+</html>
